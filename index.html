@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>Kōhi Peguin</title>
-        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="./styles/main.css">
         <link rel="manifest" href="/manifest.json">
         <meta name="theme-color" content="#d9d9d9">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -127,6 +127,7 @@
         <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/epubjs@0.3.93/dist/epub.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/idb-keyval@6/dist/umd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js"></script>
 
         <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -135,7 +136,7 @@
             const fileInput = document.getElementById('fileInput');
             const mainSection = document.getElementById('mainSection');
             const bookSection = document.getElementById('bookSection');
-            const viewer = document.getElementById('viewer');
+            const viewer = document.getElementById('viewer-container');
             const uploadBtn = document.getElementById('uploadBtn');
             const mainTextImage = document.getElementById('mainTextImage');
             const bookList = document.getElementById('bookList');

@@ -1,0 +1,50 @@
+// Importar todos los partials
+@import 'variables';
+@import 'base';
+@import 'layout';
+@import 'components';
+@import 'responsive';
+
+// Specific styles
+
+.status {
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    text-align: center;
+    font-weight: 500;
+    
+    &--success {
+        background: #e6f7ee;
+        color: #0a5c36;
+        border: 1px solid #c3e6cb;
+    }
+    
+    &--error {
+        background: #fde8e8;
+        color: #c53030;
+        border: 1px solid #f5c6cb;
+    }
+    
+    &--info {
+        background: #e3f2fd;
+        color: #1565c0;
+        border: 1px solid #bbdefb;
+    }
+}
+
+// Reading mode
+
+.read-mode {
+    .book-header,
+    .book-nav,
+    .reading-progress {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+    
+    .viewer-container {
+        height: 100vh;
+    }
+}

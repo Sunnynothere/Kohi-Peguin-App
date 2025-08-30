@@ -1,0 +1,73 @@
+// Main container
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    background: $card-bg;
+    position: relative;
+    overflow: hidden;
+}
+
+// Header
+
+.header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(to bottom, $primary, $secondary);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &__title {
+        max-width: 80%;
+        margin-bottom: 1.5rem;
+    }
+    
+    &__penguin {
+        width: 40vw;
+        max-width: 150px;
+        height: auto;
+        animation: float 3s ease-in-out infinite;
+    }
+}
+
+// Main section
+
+.main-section {
+    display: none;
+    padding: 1rem;
+    min-height: 100vh;
+    background: $background;
+    
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        margin-bottom: 1rem;
+    }
+}
+
+// Menu open
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -$sidebar-width;
+    width: $sidebar-width;
+    height: 100vh;
+    background: $card-bg;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    transition: left 0.3s ease;
+    padding: 2rem 1rem;
+    overflow-y: auto;
+    
+    &.open {
+        left: 0;
+    }
+}

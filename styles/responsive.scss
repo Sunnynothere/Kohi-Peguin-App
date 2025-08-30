@@ -1,0 +1,51 @@
+// Tablets
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+        border-radius: 20px;
+        min-height: 95vh;
+        margin-top: 2.5vh;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .book-list {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+}
+
+// Mobile Landscape
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        padding: 1rem;
+        flex-direction: row;
+        gap: 2rem;
+        
+        &__title {
+            max-width: 50%;
+            margin-bottom: 0;
+        }
+        
+        &__penguin {
+            width: 25vw;
+        }
+    }
+    
+    .viewer-container {
+        height: calc(100vh - 100px);
+    }
+}
+
+// Big Screen
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    .book-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}

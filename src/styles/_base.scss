@@ -1,0 +1,53 @@
+// _base.scss
+@use 'variables' as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: darken(v.$primary-dark, 10%);
+    color: v.$text-light;
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+// Scrollbar personalizado
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: v.$primary-dark;
+    border-radius: 3px;
+    
+    &:hover {
+        background: darken(v.$primary-dark, 10%);
+    }
+}
+
+// Animaciones
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-15px); 
+    }
+}
+
+// Estados de focus accesibles
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid v.$text-light;
+    outline-offset: 2px;
+}

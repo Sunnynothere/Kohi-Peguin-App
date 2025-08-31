@@ -1,0 +1,37 @@
+// main.scss
+@use 'variables';
+@use 'base';
+@use 'layout';
+@use 'components';
+@use 'responsive';
+
+.start-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.load-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-section {
+    display: none; /* Oculto por defecto */
+}
+
+.book-section {
+    display: none; /* Oculto por defecto */
+}
+
+.side-menu {
+    display: none; /* Oculto por defecto */
+}
+
+.overlay {
+    display: none; /* Oculto por defecto */
+}

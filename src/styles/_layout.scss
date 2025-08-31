@@ -1,21 +1,22 @@
-// Main container
+// _layout.scss
+@use 'variables' as v;
 
+// Contenedor principal
 .container {
     width: 100%;
     max-width: 100%;
     min-height: 100vh;
-    background: $card-bg;
+    background: v.$text-light;
     position: relative;
     overflow: hidden;
 }
 
 // Header
-
 .header {
     text-align: center;
     padding: 2rem 1rem;
-    background: linear-gradient(to bottom, $primary, $secondary);
-    color: white;
+    background: linear-gradient(135deg, v.$primary-dark 0%, v.$background-start 100%);
+    color: v.$text-light;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -25,6 +26,7 @@
     &__title {
         max-width: 80%;
         margin-bottom: 1.5rem;
+        font-size: 1.5rem;
     }
     
     &__penguin {
@@ -35,39 +37,53 @@
     }
 }
 
-// Main section
-
+// Sección principal
 .main-section {
     display: none;
     padding: 1rem;
     min-height: 100vh;
-    background: $background;
+    background: v.$background;
     
     &__header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 0;
-        margin-bottom: 1rem;
+        padding: 1rem 0;
+        margin-bottom: 1.5rem;
     }
 }
 
-// Menu open
-
+// Menú lateral
 .side-menu {
     position: fixed;
     top: 0;
-    left: -$sidebar-width;
-    width: $sidebar-width;
+    left: calc(-1 * v.$sidebar-width);
+    width: v.$sidebar-width;
     height: 100vh;
-    background: $card-bg;
+    background: v.$primary-dark;
     z-index: 1000;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3);
     transition: left 0.3s ease;
     padding: 2rem 1rem;
     overflow-y: auto;
     
     &.open {
         left: 0;
+    }
+}
+
+// Modo lectura
+.read-mode {
+    .book-header,
+    .book-nav,
+    .reading-progress {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    
+    .viewer-container {
+        height: 100vh;
+        background: v.$text-light;
     }
 }

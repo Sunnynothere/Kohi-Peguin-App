@@ -1,0 +1,33 @@
+// _variables.scss
+// Colores
+$colors: (
+  primary: #3d3d3d,
+  secondary: #444444,
+  background: #8E8E8E,
+  background-start: #696969,
+  text-light: #ececec,
+  success: #4CAF50,
+  error: #F44336,
+  warning: #FF9800,
+  info: #2196F3
+);
+
+// Variables individuales (para compatibilidad)
+$primary-dark: map-get($colors, primary);
+$dark: map-get($colors, secondary);
+$background: map-get($colors, background);
+$background-start: map-get($colors, background-start);
+$text-light: map-get($colors, text-light);
+
+// Dimensiones
+$header-height: 60px;
+$sidebar-width: 280px;
+$border-radius: 12px;
+
+// Breakpoints
+$breakpoints: (
+  mobile: 480px,
+  tablet: 768px,
+  desktop: 1024px,
+  large: 1200px
+);
